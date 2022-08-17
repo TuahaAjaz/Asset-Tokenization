@@ -1,3 +1,4 @@
+//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/GSN/Context.sol";
@@ -70,7 +71,7 @@ contract Crowdsale is Context, ReentrancyGuard {
      * of 2300, which is not enough to call buyTokens. Consider calling
      * buyTokens directly when purchasing tokens from a contract.
      */
-    recieve () external payable {
+    receive () external payable {
         buyTokens(_msgSender());
     }
 
